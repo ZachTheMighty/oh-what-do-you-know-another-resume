@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand Dash";
+  src: url("QuicksandDash-Regular.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Quicksand";
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+
+#header {
+  font-style: italic;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 32px 0;
+  background: linear-gradient(#f69d3c, #3f87a6);
+  position: relative;
+}
+
+#header > img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100px;
+  height: 100px;
+  -webkit-box-reflect: below 500px;
+  animation: sliding-picture 1s;
+  transition: opacity 1s;
+}
+
+#header > img:first-of-type {
+  z-index: 10;
+}
+
+#header > img:first-of-type:hover {
+  z-index: 10;
+  opacity: 0;
+}
+
+@keyframes sliding-picture {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 18px;
+  color: #1a1a1a;
+  background-color: #878787;
+  padding: 32px 24px;
+  border-style: solid;
+  border-image: url("./assets/border_image.png") 30 / 15px round;
+}
+
+@media (width <= 1000px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.right-container,
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.font-weight {
+  font-weight: 300;
+}
+
+.header {
+  color: white;
+  background-color: #1a1a1a;
+  font-weight: 500;
+  padding: 2px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+.name {
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 45px;
+  -webkit-text-stroke: 4px skyblue;
+  transition: transform 1s;
+}
+
+.name:hover {
+  transform: rotateX(180deg);
+}
+
+.position {
+  font-size: 20px;
+  text-shadow: 10px 10px 2px pink;
+}
+
+.objectives-content {
+  margin-bottom: 45px;
+}
+
+.experience,
+.education {
+  line-height: 20px;
+}
+
+.job-title,
+.education-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.personal {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.personal-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini-header {
+  font-weight: bold;
+  line-height: 10px;
+}
+
+.lang {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.arabic,
+.english {
+  display: flex;
+  justify-content: space-between;
+}
+
+.level {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.english-level {
+  margin-right: 8px;
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+.level div {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px 0px #000000;
+}
+
+.level .last {
+  background-color: #1a1a1a;
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+}
+
+.level .last-dot {
+  margin-left: 16px;
+}
+
+.contact-content div {
+  display: flex;
+  gap: 6px;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px;
+  background: radial-gradient(#f69d3c, #3f87a6);
+}
